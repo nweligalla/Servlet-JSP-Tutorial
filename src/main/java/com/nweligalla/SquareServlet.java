@@ -12,12 +12,15 @@ public class SquareServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
 		//get attribite from req object
-		int k =(int)req.getAttribute("k");
+		int k =Integer.parseInt(req.getParameter("k"));
 		
 		k*=k;
 		
 		PrintWriter out = res.getWriter();
-		out.println("Square"+k);
+		out.println("Square called"+k);
+		
+		
+		
 	}
 
 }
