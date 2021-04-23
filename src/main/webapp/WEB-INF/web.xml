@@ -5,6 +5,7 @@
   <servlet>
   	<servlet-name>abc</servlet-name>
   	<servlet-class>com.nweligalla.AddServelet</servlet-class>
+  
   </servlet>
   
   <servlet-mapping>
@@ -22,6 +23,36 @@
   	<servlet-name>pqr</servlet-name>
   	<url-pattern>/sqr</url-pattern>
   </servlet-mapping>
+  
+  <!-- servlet config-->
+  <servlet>
+  	<servlet-name>jkl</servlet-name>
+  	<servlet-class>com.nweligalla.MyServlet</servlet-class>
+  	
+  	<init-param>
+	  	<param-name>name</param-name>
+	  	<param-value>Sandun</param-value>
+ 	 </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>jkl</servlet-name>
+  	<url-pattern>/my</url-pattern>
+  </servlet-mapping>
+  
+  <!-- context shared across all servlets -->
+  <context-param>
+  	<param-name>name</param-name>
+  	<param-value>Nayana</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>Phone</param-name>
+  	<param-value>A51</param-value>
+  </context-param>
+  
+  
+  
   
   
 </web-app>
