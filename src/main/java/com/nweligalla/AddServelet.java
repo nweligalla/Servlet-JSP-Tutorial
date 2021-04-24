@@ -5,9 +5,11 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServelet extends HttpServlet{
 	
@@ -18,21 +20,29 @@ public class AddServelet extends HttpServlet{
 		
 		int k =j+j;
 		
-		//setting an attribute to req object
-		req.setAttribute("k", k);
+//		//setting an attribute to req object
+//		req.setAttribute("k", k);
 		
 	
+
 		
-//		//request dispatcher 
-//		//call another servlet from a servlet
+		
+//		//http session
 //		
-//		RequestDispatcher rd = req.getRequestDispatcher("/sqr");
-//		rd.forward(req, res);	
+//		HttpSession session =req.getSession();
+//		session.setAttribute("k", k);
+		
+		//cookies
+		
+		Cookie cookie =new Cookie("k", k+"");
+		res.addCookie(cookie);
 		
 		
 		//sendRedirect
-		
 		res.sendRedirect("sqr?k="+k); //url rewriting
+		
+		
+		
 		
 		
 		
