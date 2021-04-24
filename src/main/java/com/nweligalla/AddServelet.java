@@ -9,14 +9,27 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AddServelet extends HttpServlet{
 	
-	//service methods take 2 objects re and req
-	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	//for post methods use doPost()
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		int i = Integer.parseInt(req.getParameter("num1"));
 		int j = Integer.parseInt(req.getParameter("num2"));
 		
 		PrintWriter out = res.getWriter();		
 		out.println(i+j);
 	}
+	
+	
+	//to get use doGet()
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		int i = Integer.parseInt(req.getParameter("num1"));
+		int j = Integer.parseInt(req.getParameter("num2"));
+		
+		PrintWriter out = res.getWriter();		
+		out.println(i+j);
+	}
+	
+	
+	
 	
 
 }
