@@ -21,13 +21,23 @@ public class AddServelet extends HttpServlet{
 		//setting an attribute to req object
 		req.setAttribute("k", k);
 		
+	
+		
+//		//request dispatcher 
+//		//call another servlet from a servlet
+//		
+//		RequestDispatcher rd = req.getRequestDispatcher("/sqr");
+//		rd.forward(req, res);	
 		
 		
-		//request dispatcher 
-		//call another servlet from a servlet
+		//sendRedirect
 		
-		RequestDispatcher rd = req.getRequestDispatcher("/sqr");
-		rd.forward(req, res);	
+		res.sendRedirect("sqr?k="+k); //url rewriting
+		
+		
+		
+		
+		
 		
 	}
 	
