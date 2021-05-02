@@ -16,7 +16,7 @@
 		int k =j+j;
 		
 		out.println(k);
-		int x = 6/0;
+		//int x = 6/0;
 	%>
 	
 	
